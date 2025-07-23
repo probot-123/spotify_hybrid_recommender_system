@@ -4,6 +4,19 @@ import pandas as pd
 DATA_PATH = "data/Music Info.csv"
 
 def clean_data(data):
+    """
+    Cleans and preprocesses a Spotify dataset.
+    This function performs the following operations on the input DataFrame:
+    - Removes duplicate rows based on the 'spotify_id' column.
+    - Drops the 'genre' and 'spotify_id' columns.
+    - Fills missing values in the 'tags' column with the string 'no_tags'.
+    - Converts the 'name', 'artist', and 'tags' columns to lowercase.
+    Args:
+        data (pd.DataFrame): The input DataFrame containing Spotify track data.
+    Returns:
+        pd.DataFrame: The cleaned and preprocessed DataFrame.
+    """
+
     return (
         data
         .drop_duplicates(subset="spotify_id")
