@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+notebook
+streamlit
+dvc
+category_encoders
